@@ -161,6 +161,7 @@ class Order(Base):
     doctor_id = Column(Integer, ForeignKey('Doctor.id'))
     comment = Column(String(200))
     date_of_order = Column(Date, nullable=False)
+    approved = Column(Integer)
     histories_of_doctor = db.relationship('History_of_doctor', backref=db.backref('order', uselist=False), lazy='dynamic')
     histories_of_pharmacy = db.relationship('History_of_pharmacy', backref=db.backref('order', uselist=False), lazy='dynamic')
     item_orders = db.relationship('item_order', backref=db.backref('order', uselist=False), lazy='dynamic')
