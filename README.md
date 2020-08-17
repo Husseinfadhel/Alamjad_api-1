@@ -21,3 +21,7 @@ pip install -r requirements.txt
 ```
 
 This will install all of the required packages we selected within the `requirements.txt` file.
+
+#### Testing
+
+You can test the app by running the test_app.py file and uploading your tests
